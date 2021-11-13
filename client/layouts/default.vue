@@ -480,8 +480,5 @@
 
 <script>
 export default defineComponent({
-  css: [
-   '@/assets/css/index.css',
-  ],
 });
 </script>
