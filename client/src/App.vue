@@ -8,18 +8,8 @@
 </script>
 
 <template>
-  <div class="container mx-auto">
-    <Switch
-      v-model="enabled"
-      :class="enabled ? 'bg-green-500' : 'bg-gray-300'"
-      class="relative inline-flex items-center h-6 rounded-full w-11"
-    >
-      <span class="sr-only">Enable notifications</span>
-      <span
-        :class="enabled ? 'translate-x-6' : 'translate-x-1'"
-        class="inline-block w-4 h-4 transform bg-white rounded-full transition duration-200 ease-in-out transform"
-      />
-    </Switch>
+  <div id="test">
+      <router-view></router-view>
   </div>
 </template>
 
