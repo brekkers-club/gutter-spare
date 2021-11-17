@@ -1,14 +1,14 @@
-<script>
-import { defineComponent, onBeforeMount } from "vue";
-import http from '@/http';
+<script lang="ts">
+import { defineComponent, onBeforeMount, inject } from "vue";
 
 export default defineComponent({
   setup() {
+    const auth = inject("auth");
+
     onBeforeMount(() => {
-        http.get('/sanctum/csrf-cookie')
-            .then((response) => {
-                console.log({ response });
-            });
+      auth.csrf().then((response) => {
+        console.log({ response });
+      });
     });
   },
 });
