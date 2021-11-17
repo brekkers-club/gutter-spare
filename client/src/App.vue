@@ -3,23 +3,16 @@
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
   import { ref } from 'vue'
   import { Switch } from '@headlessui/vue'
+  import DefaultLayout from './layouts/Default.vue';
 
   const enabled = ref(false)
 </script>
 
 <template>
-  <div id="test">
+  <DefaultLayout>
       <router-view></router-view>
-  </div>
+  </DefaultLayout>
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
