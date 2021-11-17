@@ -1,11 +1,11 @@
 <script>
 import { defineComponent, onBeforeMount } from "vue";
-import axios from 'axios';
+import http from '@/http';
 
 export default defineComponent({
   setup() {
     onBeforeMount(() => {
-        axios.get('http://localhost:8888/sanctum/csrf-cookie')
+        http.get('/sanctum/csrf-cookie')
             .then((response) => {
                 console.log({ response });
             });
