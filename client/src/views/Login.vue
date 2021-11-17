@@ -1,5 +1,5 @@
 <script>
-import { defineComponent, onBeforeMount } from "@vue/runtime-core";
+import { defineComponent, onBeforeMount } from "vue";
 import axios from 'axios';
 
 export default defineComponent({
