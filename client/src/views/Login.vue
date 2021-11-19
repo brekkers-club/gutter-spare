@@ -1,9 +1,10 @@
 <script lang="ts">
 import { defineComponent, onBeforeMount, inject } from "vue";
+import { AuthProvider } from "@/providers/auth";
 
 export default defineComponent({
   setup() {
-    const auth = inject("auth");
+    const auth: AuthProvider = inject("auth");
 
     onBeforeMount(() => {
       auth.csrf().then((response) => {
