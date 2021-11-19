@@ -1,6 +1,15 @@
 import Auth from './auth';
 
+export interface AuthProvider {
+  csrf(): Promise<any>,
+}
 
-export default {
+interface Providers {
+  auth: AuthProvider,
+}
+
+const providers: Providers = {
   auth: Auth,
 }
+
+export default providers;
