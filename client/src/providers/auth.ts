@@ -1,10 +1,7 @@
 import http from '@/http';
 
-export interface AuthProvider {
-  csrf(): Promise<any>,
-}
 
-class Auth implements AuthProvider {
+class Auth {
   csrf(): Promise<any> {
     return http.get('/sanctum/csrf-cookie');
   }
