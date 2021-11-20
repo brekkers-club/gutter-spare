@@ -1,8 +1,10 @@
 <script lang="ts">
 import { defineComponent, onBeforeMount, inject } from "vue";
 import { AuthProvider } from "@/providers/auth";
+import { ExclamationIcon } from '@heroicons/vue/outline'
 
 export default defineComponent({
+  components: { ExclamationIcon },
   setup() {
     const auth = inject<AuthProvider>("auth");
 
@@ -21,14 +23,15 @@ export default defineComponent({
       credentials: {
         username: '',
         password: '',
-      }
+      },
+      error: null,
     }
   },
   methods: {
     login() {
       this.auth?.login(this.credentials)
         .then((response) => console.log({ response }))
-        .catch((error) => console.error({ error }));
+        .catch((error) => this.error = error);
     }
   },
 });
@@ -42,6 +45,11 @@ export default defineComponent({
         <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
           Sign in to your account
         </h2>
+      </div>
+      <div v-if="error">
+        <div class="mt-6 text-sm bg-red-400 rounded-md p-2 text-white">
+          <ExclamationIcon class="h-5 w-5 inline"/> {{ error }}
+        </div>
       </div>
       <form class="mt-8 space-y-6" action="#" method="POST">
         <input type="hidden" name="remember" value="true">
