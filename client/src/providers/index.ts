@@ -1,8 +1,4 @@
-import Auth from './auth';
-
-export interface AuthProvider {
-  csrf(): Promise<any>,
-}
+import Auth, { AuthProvider } from './auth';
 
 interface Providers {
   auth: AuthProvider,
