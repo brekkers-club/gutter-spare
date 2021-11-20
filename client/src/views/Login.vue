@@ -1,6 +1,6 @@
 <script lang="ts">
 import { defineComponent, onBeforeMount, inject } from "vue";
-import { AuthProvider } from "@/providers";
+import { AuthProvider } from "@/providers/auth";
 
 export default defineComponent({
   setup() {
