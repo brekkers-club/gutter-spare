@@ -15,8 +15,12 @@ class Auth {
     return http.get('/sanctum/csrf-cookie');
   }
 
-  login(credentials: Credentials): Promise<any> {
-    return http.post('/login', credentials)
+  login(credentials: Credentials, token: string): Promise<any> {
+    return http.post('/login', credentials, {
+      headers: {
+        'X-XSRF-TOKEN': token,
+      }
+    })
   }
 }
 
