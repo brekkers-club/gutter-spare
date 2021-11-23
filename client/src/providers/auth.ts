@@ -1,7 +1,7 @@
 import http from '@/http';
 
 interface Credentials {
-  username: string,
+  email: string,
   password: string,
 }
 
