@@ -30,7 +30,9 @@ export default defineComponent({
   methods: {
     login() {
       this.auth?.login(this.credentials)
-        .then((response) => console.log({ response }))
+        .then((response) => {
+          this.$store.commit('login');
+        })
         .catch((error) => this.error = error);
     }
   },
