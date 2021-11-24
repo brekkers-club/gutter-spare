@@ -6,6 +6,6 @@ interface Providers {
 
 const providers: Providers = {
   auth: Auth,
-}
+};
 
 export default providers;

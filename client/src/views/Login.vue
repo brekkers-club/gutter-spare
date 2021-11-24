@@ -1,12 +1,12 @@
 <script lang="ts">
-import { defineComponent, onBeforeMount, inject } from "vue";
-import { AuthProvider } from "@/providers/auth";
-import { ExclamationIcon } from '@heroicons/vue/outline'
+import { defineComponent, onBeforeMount, inject } from 'vue';
+import { ExclamationIcon } from '@heroicons/vue/outline';
+import { AuthProvider } from '@/providers/auth';
 
 export default defineComponent({
   components: { ExclamationIcon },
   setup() {
-    const auth = inject<AuthProvider>("auth");
+    const auth = inject<AuthProvider>('auth');
 
     onBeforeMount(() => {
       auth?.csrf().then((response) => {
@@ -16,7 +16,7 @@ export default defineComponent({
 
     return {
       auth,
-    }
+    };
   },
   data() {
     return {
@@ -25,7 +25,7 @@ export default defineComponent({
         password: '',
       },
       error: null,
-    }
+    };
   },
   methods: {
     login() {
@@ -34,7 +34,7 @@ export default defineComponent({
           this.$store.commit('login');
         })
         .catch((error) => this.error = error);
-    }
+    },
   },
 });
 </script>

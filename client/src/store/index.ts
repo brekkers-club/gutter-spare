@@ -1,14 +1,14 @@
-import {createStore} from "vuex";
+import { createStore } from 'vuex';
 
 interface VuexState {
   loggedIn: boolean,
 }
 
 const store = createStore({
-  state (): VuexState {
+  state(): VuexState {
     return {
       loggedIn: false,
-    }
+    };
   },
   mutations: {
     login(state: VuexState) {
@@ -17,8 +17,8 @@ const store = createStore({
     },
     logout(state: VuexState) {
       state.loggedIn = false;
-    }
-  }
+    },
+  },
 });
 
 export default store;

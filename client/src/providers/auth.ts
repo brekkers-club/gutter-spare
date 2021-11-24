@@ -19,8 +19,8 @@ class Auth {
     return http.post('/login', credentials, {
       headers: {
         'X-XSRF-TOKEN': token,
-      }
-    })
+      },
+    });
   }
 }
 
