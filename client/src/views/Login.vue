@@ -1,5 +1,7 @@
 <script lang="ts">
 import { defineComponent, onBeforeMount, inject } from 'vue';
+import { useRouter } from 'vue-router';
+import { useStore } from 'vuex'
 import { ExclamationIcon } from '@heroicons/vue/outline';
 import { AuthProvider } from '@/providers/auth';
 
@@ -7,15 +9,13 @@ export default defineComponent({
   components: { ExclamationIcon },
   setup() {
     const auth = inject<AuthProvider>('auth');
-
-    onBeforeMount(() => {
-      auth?.csrf().then((response) => {
-        console.log({ response });
-      });
-    });
+    const router = useRouter();
+    const store = useStore();
 
     return {
       auth,
+      router,
+      store,
     };
   },
   data() {
@@ -29,11 +29,13 @@ export default defineComponent({
   },
   methods: {
     login() {
-      this.auth?.login(this.credentials)
-        .then((response) => {
-          this.$store.commit('login');
-        })
-        .catch((error) => this.error = error);
+      this.auth?.csrf().then((response) => {
+        this.auth?.login(this.credentials)
+            .then((response) => {
+              console.log({ response })
+            })
+            .catch((error) => this.error = error);
+      });
     },
   },
 });
