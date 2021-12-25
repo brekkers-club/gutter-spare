@@ -2,7 +2,5 @@
   <div>Home</div>
 </template>
 <script lang="ts">
-
-console.log('test')
-
+console.log("test", "hello");
 </script>
