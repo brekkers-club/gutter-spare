@@ -1,7 +1,7 @@
 <script lang="ts">
 import { defineComponent, onBeforeMount, inject } from 'vue';
 import { useRouter } from 'vue-router';
-import { useStore } from 'vuex'
+import { useStore } from 'vuex';
 import { ExclamationIcon } from '@heroicons/vue/outline';
 import { useAuth } from '@/composables';
 
@@ -31,10 +31,10 @@ export default defineComponent({
     login() {
       this.auth?.csrf().then((response) => {
         this.auth?.login(this.credentials)
-            .then((response) => {
-              console.log({ response })
-            })
-            .catch((error) => this.error = error);
+          .then((response) => {
+            console.log({ response });
+          })
+          .catch((error) => this.error = error);
       });
     },
   },
