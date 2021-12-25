@@ -1,8 +1,7 @@
 <script setup lang="ts">
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-import DefaultLayout from './layouts/Default.vue';
-
+import DefaultLayout from "./layouts/DefaultLayout.vue";
 </script>
 
 <template>
@@ -11,5 +10,4 @@ import DefaultLayout from './layouts/Default.vue';
   </DefaultLayout>
 </template>
 
-<style>
-</style>
+<style></style>

@@ -1,7 +1,7 @@
-import { createStore } from 'vuex';
+import { createStore } from "vuex";
 
 interface VuexState {
-  loggedIn: boolean,
+  loggedIn: boolean;
 }
 
 const store = createStore({

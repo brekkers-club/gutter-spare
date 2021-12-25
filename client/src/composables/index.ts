@@ -1,1 +1,1 @@
-export { default as useAuth } from '@/composables/auth';
+export { default as useAuth } from "@/composables/auth";

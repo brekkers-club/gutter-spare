@@ -5,8 +5,8 @@
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "serve": "vite preview",
-    "lint": "npx eslint --ext .ts,.vue src/",
-    "format": "npx eslint --ext .ts,.vue --fix src/"
+    "lint": "npx prettier --check .",
+    "format": "npx prettier --write ."
   },
   "dependencies": {
     "@headlessui/vue": "^1.4.2",
@@ -24,9 +24,11 @@
     "autoprefixer": "^10.4.0",
     "eslint": "^8.3.0",
     "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-vue": "^8.1.1",
     "postcss": "^8.3.11",
+    "prettier": "2.5.1",
     "tailwindcss": "^2.2.19",
     "typescript": "^4.4.3",
     "vite": "^2.6.4",
