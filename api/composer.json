@@ -19,7 +19,8 @@
         "laravel/sail": "^1.12.4",
         "mockery/mockery": "^1.4.4",
         "nunomaduro/collision": "^5.10",
-        "phpunit/phpunit": "^9.5.10"
+        "phpunit/phpunit": "^9.5.10",
+        "vimeo/psalm": "^4.15"
     },
     "autoload": {
         "psr-4": {
@@ -46,7 +47,8 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
-        ]
+        ],
+        "psalm": "./vendor/bin/psalm --show-info=true"
     },
     "extra": {
         "laravel": {
