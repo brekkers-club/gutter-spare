@@ -3,12 +3,12 @@ import { defineComponent, onBeforeMount, inject } from 'vue';
 import { useRouter } from 'vue-router';
 import { useStore } from 'vuex'
 import { ExclamationIcon } from '@heroicons/vue/outline';
-import { AuthProvider } from '@/providers/auth';
+import { useAuth } from '@/composables';
 
 export default defineComponent({
   components: { ExclamationIcon },
   setup() {
-    const auth = inject<AuthProvider>('auth');
+    const auth = useAuth();
     const router = useRouter();
     const store = useStore();
 
