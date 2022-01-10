@@ -6,6 +6,7 @@ namespace App\Models\Traits;
  * @property User $user
  */
 trait OwnedByUser {
+
     protected function bootOwnedByUser() {
 
     }
