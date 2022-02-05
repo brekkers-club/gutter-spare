@@ -15,7 +15,7 @@ export default defineComponent({
     store.$onAction(({ name, store, after }) => {
       after(() => {
         if (name === "login" && store.isAuthenicated) {
-          router.push({ path: "home" });
+          router.push({ name: "Home" });
         }
       });
     });
