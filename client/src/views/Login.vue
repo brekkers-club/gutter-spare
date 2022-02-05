@@ -3,16 +3,27 @@ import { defineComponent } from "vue";
 import { useRouter } from "vue-router";
 import { ExclamationIcon } from "@heroicons/vue/outline";
 import { useAuth } from "@/composables";
+import useStore from "@/store";
 
 export default defineComponent({
   components: { ExclamationIcon },
   setup() {
     const auth = useAuth();
     const router = useRouter();
+    const store = useStore();
+
+    store.$onAction(({ name, store, after }) => {
+      after(() => {
+        if (name === "login" && store.isAuthenicated) {
+          router.push({ path: "home" });
+        }
+      });
+    });
 
     return {
       auth,
       router,
+      store,
     };
   },
   data() {
@@ -25,15 +36,13 @@ export default defineComponent({
     };
   },
   methods: {
-    login() {
-      this.auth?.csrf().then((response) => {
-        this.auth
-          ?.login(this.credentials)
-          .then((response) => {
-            console.log({ response });
-          })
-          .catch((error) => (this.error = error));
-      });
+    async login() {
+      try {
+        const user = await this.store.login(this.credentials);
+        console.log({ user });
+      } catch (error: any) {
+        this.error = error;
+      }
     },
   },
 });
