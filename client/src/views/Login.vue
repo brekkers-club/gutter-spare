@@ -1,7 +1,6 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import { useRouter } from "vue-router";
-import { useStore } from "vuex";
 import { ExclamationIcon } from "@heroicons/vue/outline";
 import { useAuth } from "@/composables";
 
@@ -10,12 +9,10 @@ export default defineComponent({
   setup() {
     const auth = useAuth();
     const router = useRouter();
-    const store = useStore();
 
     return {
       auth,
       router,
-      store,
     };
   },
   data() {
