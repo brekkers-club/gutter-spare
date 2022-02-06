@@ -1,11 +1,17 @@
 #!/bin/sh
-FILES=$(git diff --cached --name-only --diff-filter=ACMR client | sed 's| |\\ |g')
-[ -z "$FILES" ] && exit 0
+CLIENT_FILES=$(git diff --cached --name-only --diff-filter=ACMR client | sed 's| |\\ |g')
 
 # Prettify all selected files
-echo "$FILES" | xargs ./client/node_modules/.bin/prettier --ignore-unknown --write
+echo "$CLIENT_FILES" | xargs ./client/node_modules/.bin/prettier --ignore-unknown --write
 
-# Add back the modified/prettified files to staging
-echo "$FILES" | xargs git add
+echo $(pwd);
+
+pushd api
+
+xargs ./vendor/bin/sail composer format
+
+popd
+
+git add .
 
 exit 0

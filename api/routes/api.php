@@ -15,6 +15,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-//    Auth::guard('web')->logout();
+        Auth::guard('web')->logout();
     return $request->user();
 });
