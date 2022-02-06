@@ -125,15 +125,13 @@
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/phpdocumentor/type-resolver" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/phpdocumentor/reflection-docblock" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/graham-campbell/result-type" />
-      <excludeFolder url="file://$MODULE_DIR$/api/vendor/openlss/lib-array2xml" />
-      <excludeFolder url="file://$MODULE_DIR$/api/vendor/felixfbecker/advanced-json-rpc" />
-      <excludeFolder url="file://$MODULE_DIR$/api/vendor/felixfbecker/language-server-protocol" />
-      <excludeFolder url="file://$MODULE_DIR$/api/vendor/dnoegel/php-xdg-base-dir" />
-      <excludeFolder url="file://$MODULE_DIR$/api/vendor/vimeo/psalm" />
-      <excludeFolder url="file://$MODULE_DIR$/api/vendor/netresearch/jsonmapper" />
-      <excludeFolder url="file://$MODULE_DIR$/api/vendor/amphp/byte-stream" />
-      <excludeFolder url="file://$MODULE_DIR$/api/vendor/amphp/amp" />
-      <excludeFolder url="file://$MODULE_DIR$/api/vendor/webmozart/path-util" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/friendsofphp/php-cs-fixer" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/php-cs-fixer/diff" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/psr/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/options-resolver" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/filesystem" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/stopwatch" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/doctrine/annotations" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
