@@ -7,12 +7,9 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   setup() {
-    // setInterval(() => {
-    http
-      .get("/api/user")
-      .then((data) => console.log({ data }))
-      .catch((error) => console.log({ error }));
-    // }, 1000)
+    setInterval(() => {
+      http.get("/api/user").then((data) => console.log({ data }));
+    }, 1000);
   },
 });
 </script>

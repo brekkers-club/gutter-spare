@@ -9,6 +9,7 @@ export default (() => {
       return {
         isAuthenicated: false,
         user: null,
+        redirectAfterLogin: null,
       };
     },
     actions: {

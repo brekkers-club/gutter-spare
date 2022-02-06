@@ -13,10 +13,6 @@ const router = createRouter({
   routes,
 });
 
-router.onError((error) => {
-  console.log({ error });
-});
-
 router.beforeEach((to, from, next) => {
   const store = useStore();
 
