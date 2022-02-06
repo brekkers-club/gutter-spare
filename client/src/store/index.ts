@@ -25,6 +25,14 @@ export default (() => {
           throw error;
         }
       },
+      async logout(): Promise<any> {
+        try {
+          await auth.logout();
+          this.$reset();
+        } catch (error) {
+          throw error;
+        }
+      },
     },
   });
 })();

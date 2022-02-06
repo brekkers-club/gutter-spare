@@ -6,10 +6,6 @@ import http from "@/http";
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  setup() {
-    setInterval(() => {
-      http.get("/api/user").then((data) => console.log({ data }));
-    }, 1000);
-  },
+  setup() {},
 });
 </script>

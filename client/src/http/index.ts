@@ -21,6 +21,7 @@ http.interceptors.response.use(
 
     if (error.response.status === 401) {
       store.isAuthenicated = false;
+      // @ts-ignore
       store.redirectAfterLogin = router.currentRoute.value;
       router.push({ name: "Login" });
       return Promise.resolve();

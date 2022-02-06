@@ -1,3 +1,22 @@
+<script>
+import { defineComponent } from "vue";
+import useStore from "@/store";
+
+export default defineComponent({
+  setup() {
+    const store = useStore();
+
+    return {
+      store,
+    };
+  },
+  methods: {
+    logout() {
+      this.store.logout();
+    },
+  },
+});
+</script>
 <template>
   <div class="min-h-full">
     <nav class="bg-gray-800">
@@ -128,12 +147,12 @@
                   >
 
                   <a
-                    href="#"
+                    @click="() => logout()"
                     class="block px-4 py-2 text-sm text-gray-700"
                     role="menuitem"
                     tabindex="-1"
                     id="user-menu-item-2"
-                    >Sign out</a
+                    >Logout</a
                   >
                 </div>
               </div>
