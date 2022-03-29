@@ -134,6 +134,21 @@
       <path value="$PROJECT_DIR$/api/vendor/pestphp/pest" />
       <path value="$PROJECT_DIR$/api/vendor/pestphp/pest-plugin" />
       <path value="$PROJECT_DIR$/api/vendor/pestphp/pest-plugin-laravel" />
+      <path value="$PROJECT_DIR$/api/vendor/webmozart/path-util" />
+      <path value="$PROJECT_DIR$/api/vendor/openlss/lib-array2xml" />
+      <path value="$PROJECT_DIR$/api/vendor/dnoegel/php-xdg-base-dir" />
+      <path value="$PROJECT_DIR$/api/vendor/vimeo/psalm" />
+      <path value="$PROJECT_DIR$/api/vendor/amphp/byte-stream" />
+      <path value="$PROJECT_DIR$/api/vendor/amphp/amp" />
+      <path value="$PROJECT_DIR$/api/vendor/felixfbecker/language-server-protocol" />
+      <path value="$PROJECT_DIR$/api/vendor/felixfbecker/advanced-json-rpc" />
+      <path value="$PROJECT_DIR$/api/vendor/netresearch/jsonmapper" />
+      <path value="$PROJECT_DIR$/api/vendor/spatie/laravel-ignition" />
+      <path value="$PROJECT_DIR$/api/vendor/spatie/ignition" />
+      <path value="$PROJECT_DIR$/api/vendor/spatie/flare-client-php" />
+      <path value="$PROJECT_DIR$/api/vendor/spatie/backtrace" />
+      <path value="$PROJECT_DIR$/api/vendor/fruitcake/php-cors" />
+      <path value="$PROJECT_DIR$/api/vendor/symfony/mailer" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.1" />

@@ -2,7 +2,6 @@
 
 namespace App\Exceptions;
 
-class UserNotSetException
+class UserNotSetException extends \Exception
 {
-
 }

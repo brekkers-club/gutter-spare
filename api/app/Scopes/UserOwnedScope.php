@@ -16,6 +16,6 @@ class UserOwnedScope implements Scope
             throw new UserNotSetException("Models that use UserOwnedScope can't be accessed without a user.");
         }
 
-        return $builder->where($model->getTable() . 'userID', Auth::user()->id);
+        return $builder->where($model->getTable() . '.userID', Auth::user()->id);
     }
 }

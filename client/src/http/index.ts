@@ -3,7 +3,7 @@ import useStore from "@/store";
 import router from "@/router";
 
 const http: AxiosInstance = axios.create({
-  baseURL: "http://localhost:8888",
+  baseURL: "http://localhost:8080",
   headers: {
     "Content-type": "application/json",
   },

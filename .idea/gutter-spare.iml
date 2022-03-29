@@ -135,6 +135,12 @@
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/pestphp/pest" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/pestphp/pest-plugin" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/pestphp/pest-plugin-laravel" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/spatie/laravel-ignition" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/spatie/ignition" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/spatie/flare-client-php" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/spatie/backtrace" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/fruitcake/php-cors" />
+      <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/mailer" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
