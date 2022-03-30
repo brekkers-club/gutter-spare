@@ -17,7 +17,8 @@ return new class extends Migration
             $table->id();
             $table->unsignedInteger('firstShotID')->index();
             $table->unsignedInteger('secondShotID')->index()->nullable();
-            $table->char('mark', 1);
+            $table->unsignedInteger('thirdShotID')->index()->nullable();
+            $table->unsignedInteger('frameNumber');
             $table->timestamps();
         });
     }
