@@ -19,14 +19,15 @@ class UserSeeder extends Seeder
         $user = User::factory()
             ->create([
                 'email' => 'league@bowler.com',
-                'name' => 'League Bowler',
+                'first_name' => 'League',
+                'last_name' => 'Bowler',
                 'password' => Hash::make('lane1234'),
             ]);
 
-        $games = Game::factory()->count(3)->create([
-            'userID' => $user->id,
+        $games = Game::factory()->create([
+            'user_id' => $user->id,
         ]);
 
-        $user->games()->saveMany($games);
+        $user->games()->save($games);
     }
 }
