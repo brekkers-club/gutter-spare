@@ -14,7 +14,7 @@ return new class () extends Migration {
     {
         Schema::create('games', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('userID')->index();
+            $table->unsignedInteger('user_id')->index();
             $table->timestamps();
         });
     }

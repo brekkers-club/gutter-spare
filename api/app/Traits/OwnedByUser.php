@@ -7,6 +7,7 @@ namespace App\Traits;
 use App\Models\User;
 use App\Scopes\UserOwnedScope;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Facades\Auth;
 
 trait OwnedByUser
@@ -22,8 +23,11 @@ trait OwnedByUser
         });
     }
 
-    public function user()
+    /**
+     * @return BelongsTo
+     */
+    public function user(): BelongsTo
     {
-        return $this->belongsTo(User::class, 'userID');
+        return $this->belongsTo(User::class, 'user_id');
     }
 }
