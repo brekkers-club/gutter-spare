@@ -16,10 +16,18 @@ tasks:
     cmds:
       - task: api:dev
       - task: client:dev
+  format:
+    cmds:
+      - task: api:format
+      - task: client:format
   install:
     cmds:
       - task: api:install
       - task: client:install
+  lint:
+    cmds:
+      - task: api:lint
+      - task: client:lint
   setup:
     cmds:
       - task: api:setup

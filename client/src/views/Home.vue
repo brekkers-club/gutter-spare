@@ -7,7 +7,7 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   setup() {
-    http.get("/api/v1/games").then((data) => console.log({ data }))
+    http.get("/api/v1/games").then((data) => console.log({ data }));
   },
 });
 </script>

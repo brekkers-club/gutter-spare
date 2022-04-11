@@ -41,70 +41,90 @@ class GameTest extends TestCase
         /** @var Game $game */
         $game = Game::find($response->json()['data']['id']);
 
-        $this->assertEquals(2, $game->frames()
+        $this->assertEquals(
+            2,
+            $game->frames()
             ->where('frame_number', 1)
             ->first()
             ->rolls()
             ->count()
         );
 
-        $this->assertEquals(2, $game->frames()
+        $this->assertEquals(
+            2,
+            $game->frames()
             ->where('frame_number', 2)
             ->first()
             ->rolls()
             ->count()
         );
 
-        $this->assertEquals(2, $game->frames()
+        $this->assertEquals(
+            2,
+            $game->frames()
             ->where('frame_number', 3)
             ->first()
             ->rolls()
             ->count()
         );
 
-        $this->assertEquals(2, $game->frames()
+        $this->assertEquals(
+            2,
+            $game->frames()
             ->where('frame_number', 4)
             ->first()
             ->rolls()
             ->count()
         );
 
-        $this->assertEquals(2, $game->frames()
+        $this->assertEquals(
+            2,
+            $game->frames()
             ->where('frame_number', 5)
             ->first()
             ->rolls()
             ->count()
         );
 
-        $this->assertEquals(2, $game->frames()
+        $this->assertEquals(
+            2,
+            $game->frames()
             ->where('frame_number', 6)
             ->first()
             ->rolls()
             ->count()
         );
 
-        $this->assertEquals(2, $game->frames()
+        $this->assertEquals(
+            2,
+            $game->frames()
             ->where('frame_number', 7)
             ->first()
             ->rolls()
             ->count()
         );
 
-        $this->assertEquals(2, $game->frames()
+        $this->assertEquals(
+            2,
+            $game->frames()
             ->where('frame_number', 8)
             ->first()
             ->rolls()
             ->count()
         );
 
-        $this->assertEquals(2, $game->frames()
+        $this->assertEquals(
+            2,
+            $game->frames()
             ->where('frame_number', 9)
             ->first()
             ->rolls()
             ->count()
         );
 
-        $this->assertEquals(3, $game->frames()
+        $this->assertEquals(
+            3,
+            $game->frames()
             ->where('frame_number', 10)
             ->first()
             ->rolls()

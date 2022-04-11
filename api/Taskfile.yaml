@@ -10,6 +10,10 @@ tasks:
     cmds:
       - cd {{.DIRECTORY}}/api && {{.SAIL}} up -d
     silent: false
+  format:
+    cmds:
+      - cd {{.DIRECTORY}}/api && {{.SAIL}} composer format
+    silent: false
   install:
     cmds:
       - |
@@ -20,6 +24,10 @@ tasks:
         -w /var/www/html \
         laravelsail/php81-composer:latest \
         composer install --ignore-platform-reqs
+    silent: false
+  lint:
+    cmds:
+      - cd {{.DIRECTORY}}/api && {{.SAIL}} composer lint
     silent: false
   migrate:
     cmds:
