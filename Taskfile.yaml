@@ -16,3 +16,7 @@ tasks:
     cmds:
       - task: api:dev
       - task: client:dev
+  install:
+    cmds:
+      - task: api:install
+      - task: client:install

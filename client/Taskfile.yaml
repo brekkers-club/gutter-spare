@@ -6,4 +6,8 @@ tasks:
   dev:
     cmds:
       - cd {{.DIRECTORY}}/client && npm run dev
-    silent: true
+    silent: false
+  install:
+    cmds:
+      - cd {{.DIRECTORY}}/client && npm install
+    silent: false
