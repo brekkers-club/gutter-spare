@@ -21,3 +21,16 @@ tasks:
         laravelsail/php81-composer:latest \
         composer install --ignore-platform-reqs
     silent: false
+  migrate:
+    cmds:
+      - cd {{.DIRECTORY}}/api && vendor/bin/sail artisan migrate:fresh
+  seed:
+    cmds:
+      - cd {{.DIRECTORY}}/api && vendor/bin/sail artisan db:seed
+  setup:
+    cmds:
+      - task: dev
+      - task: install
+      - task: migrate
+      - task: seed
+    silent: false

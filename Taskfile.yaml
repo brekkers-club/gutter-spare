@@ -20,3 +20,7 @@ tasks:
     cmds:
       - task: api:install
       - task: client:install
+  setup:
+    cmds:
+      - task: api:setup
+      - task: client:install
