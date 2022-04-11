@@ -18,6 +18,10 @@ class Frame extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+      'frame_number'
+    ];
+
     /**
      * @return HasMany
      */

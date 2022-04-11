@@ -17,8 +17,8 @@ trait OwnedByUser
         static::addGlobalScope(new UserOwnedScope());
 
         static::creating(function ($model) {
-            if (Auth::user() && !$model->userID && !$model->relationLoaded('user')) {
-                $model->userID = Auth::user()->id;
+            if (Auth::user() && !$model->user_id && !$model->relationLoaded('user')) {
+                $model->user_id = Auth::user()->id;
             }
         });
     }

@@ -19,6 +19,10 @@ class Roll extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+      'roll_number'
+    ];
+
     /**
      * @return BelongsTo
      */
