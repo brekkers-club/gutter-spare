@@ -8,5 +8,5 @@ vars:
 tasks:
   dev:
     cmds:
-      - echo "{{.GREETING}}"
-    silent: true
+      - cd {{.DIRECTORY}}/api && vendor/bin/sail up -d
+    silent: false

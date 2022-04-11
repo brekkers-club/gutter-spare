@@ -2,6 +2,9 @@
 
 version: '3'
 
+vars:
+  DIRECTORY: {sh: pwd}
+
 includes:
   api:
     taskfile: ./api/Taskfile.yaml

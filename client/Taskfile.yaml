@@ -2,11 +2,8 @@
 
 version: '3'
 
-vars:
-  GREETING: Hello, client!
-
 tasks:
   dev:
     cmds:
-      - echo "{{.GREETING}}"
+      - cd {{.DIRECTORY}}/client && npm run dev
     silent: true
