@@ -24,3 +24,7 @@ tasks:
     cmds:
       - task: api:setup
       - task: client:install
+  test:
+    cmds:
+      - task: api:test
+#      - task: client:test

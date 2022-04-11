@@ -11,3 +11,7 @@ tasks:
     cmds:
       - cd {{.DIRECTORY}}/client && npm install
     silent: false
+#  test:
+#    cmds:
+#      - cd {{.DIRECTORY}}/client && npm run test
+#    silent: false
