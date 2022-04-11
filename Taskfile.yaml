@@ -1,0 +1,15 @@
+# https://taskfile.dev
+
+version: '3'
+
+includes:
+  api:
+    taskfile: ./api/Taskfile.yaml
+  client:
+    taskfile: ./client/Taskfile.yaml
+
+tasks:
+  dev:
+    cmds:
+      - task: api:dev
+      - task: client:dev
