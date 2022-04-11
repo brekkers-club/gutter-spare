@@ -131,9 +131,6 @@
       <path value="$PROJECT_DIR$/api/vendor/symfony/filesystem" />
       <path value="$PROJECT_DIR$/api/vendor/symfony/stopwatch" />
       <path value="$PROJECT_DIR$/api/vendor/doctrine/annotations" />
-      <path value="$PROJECT_DIR$/api/vendor/pestphp/pest" />
-      <path value="$PROJECT_DIR$/api/vendor/pestphp/pest-plugin" />
-      <path value="$PROJECT_DIR$/api/vendor/pestphp/pest-plugin-laravel" />
       <path value="$PROJECT_DIR$/api/vendor/webmozart/path-util" />
       <path value="$PROJECT_DIR$/api/vendor/openlss/lib-array2xml" />
       <path value="$PROJECT_DIR$/api/vendor/dnoegel/php-xdg-base-dir" />
