@@ -7,6 +7,7 @@ namespace App\Traits;
 use App\Models\User;
 use App\Scopes\UserOwnedScope;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Facades\Auth;
 
 trait OwnedByUser
@@ -16,14 +17,17 @@ trait OwnedByUser
         static::addGlobalScope(new UserOwnedScope());
 
         static::creating(function ($model) {
-            if (Auth::user() && !$model->userID && !$model->relationLoaded('user')) {
-                $model->userID = Auth::user()->id;
+            if (Auth::user() && !$model->user_id && !$model->relationLoaded('user')) {
+                $model->user_id = Auth::user()->id;
             }
         });
     }
 
-    public function user()
+    /**
+     * @return BelongsTo
+     */
+    public function user(): BelongsTo
     {
-        return $this->belongsTo(User::class, 'userID');
+        return $this->belongsTo(User::class, 'user_id');
     }
 }

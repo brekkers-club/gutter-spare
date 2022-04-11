@@ -11,4 +11,14 @@ class GameController extends Controller
     {
         return Game::paginate();
     }
+
+    public function store()
+    {
+        return response()
+            ->json([
+               'data' => [
+                   'id' => Game::create()->id
+               ],
+            ]);
+    }
 }

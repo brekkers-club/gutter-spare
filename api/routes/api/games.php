@@ -6,7 +6,5 @@ use App\Http\Controllers\GameController;
 
 Route::prefix('/games')->group(function () {
     Route::get('/', [GameController::class, 'index']);
-    Route::get('{game}', function () {
-        return 'game';
-    });
+    Route::post('/', [GameController::class, 'store']);
 });

@@ -132,9 +132,6 @@
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/filesystem" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/symfony/stopwatch" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/doctrine/annotations" />
-      <excludeFolder url="file://$MODULE_DIR$/api/vendor/pestphp/pest" />
-      <excludeFolder url="file://$MODULE_DIR$/api/vendor/pestphp/pest-plugin" />
-      <excludeFolder url="file://$MODULE_DIR$/api/vendor/pestphp/pest-plugin-laravel" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/spatie/laravel-ignition" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/spatie/ignition" />
       <excludeFolder url="file://$MODULE_DIR$/api/vendor/spatie/flare-client-php" />
