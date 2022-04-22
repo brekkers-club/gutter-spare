@@ -31,7 +31,7 @@ tasks:
     silent: false
   migrate:
     cmds:
-      - cd {{.DIRECTORY}}/api && {{.SAIL}} artisan migrate:fresh
+      - cd {{.DIRECTORY}}/api && {{.SAIL}} artisan migrate
   seed:
     cmds:
       - cd {{.DIRECTORY}}/api && {{.SAIL}} artisan db:seed
