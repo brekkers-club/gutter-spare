@@ -37,8 +37,8 @@ tasks:
       - cd {{.DIRECTORY}}/api && {{.SAIL}} artisan db:seed
   setup:
     cmds:
-      - task: dev
       - task: install
+      - task: dev
       - task: migrate
       - task: seed
     silent: false
