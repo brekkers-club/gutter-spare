@@ -1,11 +1,14 @@
 # gutter-spare
 
-## Requirements
+
+## Contributing
+
+### Requirements
 
 - [Docker](https://www.docker.com/)
 - [Taskfile](https://taskfile.dev/#/usage)
 
-## Git Hooks
+### Git Hooks
 
 ```shell
 git config core.hooksPath .hooks
