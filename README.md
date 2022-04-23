@@ -13,3 +13,12 @@
 ```shell
 git config core.hooksPath .hooks
 ```
+
+### Useful Commands
+
+
+Clean up all sail containers
+
+```
+./vendor/bin/sail down --rmi all -v
+```
