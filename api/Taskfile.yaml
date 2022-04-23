@@ -8,7 +8,8 @@ vars:
 tasks:
   dev:
     cmds:
-      - cd {{.DIRECTORY}}/api && {{.SAIL}} up -d
+      - cd {{.DIRECTORY}}/api && {{.SAIL}} --ansi=always up -d
+      - sleep 10
     silent: false
   env:
     cmds:
