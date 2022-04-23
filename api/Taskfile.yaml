@@ -10,6 +10,9 @@ tasks:
     cmds:
       - cd {{.DIRECTORY}}/api && {{.SAIL}} up -d
     silent: false
+  env:
+    cmds:
+      - cp -R -u -p {{.DIRECTORY}}/api/.env.example {{.DIRECTORY}}/api/.env
   format:
     cmds:
       - cd {{.DIRECTORY}}/api && {{.SAIL}} composer format
@@ -37,6 +40,7 @@ tasks:
       - cd {{.DIRECTORY}}/api && {{.SAIL}} artisan db:seed
   setup:
     cmds:
+      - task: env
       - task: install
       - task: dev
       - task: migrate
