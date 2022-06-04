@@ -8,6 +8,15 @@
 - [Docker](https://www.docker.com/)
 - [Taskfile](https://taskfile.dev/#/usage)
 
+
+### Development
+
+Start up the local environment
+
+```
+cd path/to/gutter-spare && task setup
+```
+
 ### Git Hooks
 
 ```shell
