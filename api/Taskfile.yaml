@@ -9,7 +9,10 @@ tasks:
   dev:
     cmds:
       - cd {{.DIRECTORY}}/api && {{.SAIL}} --ansi=always up -d
-      - sleep 10
+      - |
+        until [ "`docker inspect -f {{.State.Running}} api_mysql_1`"=="true" ]; do\
+          sleep 0.1; \
+        done;
     silent: false
   env:
     cmds:
