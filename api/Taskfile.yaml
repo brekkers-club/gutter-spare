@@ -1,0 +1,56 @@
+# https://taskfile.dev
+
+version: '3'
+
+vars:
+  SAIL: vendor/bin/sail
+
+tasks:
+  dev:
+    cmds:
+      - cd {{.DIRECTORY}}/api && {{.SAIL}} --ansi=always up -d
+      - |
+        until [ "`docker inspect -f {{.State.Running}} api_mysql_1`"=="true" ]; do\
+          sleep 0.1; \
+        done;
+    silent: false
+  env:
+    cmds:
+      - cp -R -u -p {{.DIRECTORY}}/api/.env.example {{.DIRECTORY}}/api/.env
+  format:
+    cmds:
+      - cd {{.DIRECTORY}}/api && {{.SAIL}} composer format
+    silent: false
+  install:
+    cmds:
+      - |
+        cd {{.DIRECTORY}}/api && \
+        docker run --rm \
+        -u "$(id -u):$(id -g)" \
+        -v $(pwd):/var/www/html \
+        -w /var/www/html \
+        laravelsail/php81-composer:latest \
+        composer install --ignore-platform-reqs
+    silent: false
+  lint:
+    cmds:
+      - cd {{.DIRECTORY}}/api && {{.SAIL}} composer lint
+    silent: false
+  migrate:
+    cmds:
+      - cd {{.DIRECTORY}}/api && {{.SAIL}} artisan migrate
+  seed:
+    cmds:
+      - cd {{.DIRECTORY}}/api && {{.SAIL}} artisan db:seed
+  setup:
+    cmds:
+      - task: env
+      - task: install
+      - task: dev
+      - task: migrate
+      - task: seed
+    silent: false
+  test:
+    cmds:
+      - cd {{.DIRECTORY}}/api && {{.SAIL}} composer test
+    silent: false

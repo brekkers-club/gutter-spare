@@ -1,0 +1,25 @@
+# https://taskfile.dev
+
+version: "3"
+
+tasks:
+  dev:
+    cmds:
+      - cd {{.DIRECTORY}}/client && npm run dev
+    silent: false
+  format:
+    cmds:
+      - cd {{.DIRECTORY}}/client && npm run format
+    silent: false
+  install:
+    cmds:
+      - cd {{.DIRECTORY}}/client && npm install
+    silent: false
+  lint:
+    cmds:
+      - cd {{.DIRECTORY}}/client && npm run lint
+    silent: false
+#  test:
+#    cmds:
+#      - cd {{.DIRECTORY}}/client && npm run test
+#    silent: false

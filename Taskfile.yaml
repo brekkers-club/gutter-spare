@@ -1,0 +1,38 @@
+# https://taskfile.dev
+
+version: '3'
+
+vars:
+  DIRECTORY: {sh: pwd}
+
+includes:
+  api:
+    taskfile: ./api/Taskfile.yaml
+  client:
+    taskfile: ./client/Taskfile.yaml
+
+tasks:
+  dev:
+    cmds:
+      - task: api:dev
+      - task: client:dev
+  format:
+    cmds:
+      - task: api:format
+      - task: client:format
+  install:
+    cmds:
+      - task: api:install
+      - task: client:install
+  lint:
+    cmds:
+      - task: api:lint
+      - task: client:lint
+  setup:
+    cmds:
+      - task: api:setup
+      - task: client:install
+  test:
+    cmds:
+      - task: api:test
+#      - task: client:test

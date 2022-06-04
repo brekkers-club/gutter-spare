@@ -49,6 +49,7 @@
             "@php artisan key:generate --ansi"
         ],
         "format": "./vendor/bin/php-cs-fixer fix .",
+        "lint": "./vendor/bin/php-cs-fixer fix . --dry-run",
         "test": "php vendor/bin/phpunit"
     },
     "extra": {
